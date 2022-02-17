@@ -1,10 +1,15 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 import smtplib
+from smtplib import SMTP_SSL
 import os
 
 
 
 app = Flask(__name__)
+
+
+SMTP_SERVER = "smtp.gmail.com"
+PORT = 465
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 MY_EMAIL = os.environ.get('MY_EMAIL')
@@ -12,8 +17,7 @@ MY_PASSWORD = os.environ.get('MY_PASSWORD')
 RECEIVING_EMAIL = os.environ.get('RECEIVING_EMAIL')
 
 
-SMTP_SERVER = "smtp.gmail.com"
-PORT = 587
+
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -28,8 +32,7 @@ def send_message():
         subject = request.form['subject']
         message = request.form['message']
 
-        with smtplib.SMTP(SMTP_SERVER, PORT) as connection:
-            connection.starttls()
+        with smtplib.SMTP_SSL(SMTP_SERVER, PORT) as connection:
             connection.login(MY_EMAIL, MY_PASSWORD)
             connection.sendmail(
                 from_addr=MY_EMAIL,
