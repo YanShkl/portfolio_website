@@ -10,11 +10,10 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 MY_EMAIL = os.environ.get('MY_EMAIL')
 MY_PASSWORD = os.environ.get('MY_PASSWORD')
 RECEIVING_EMAIL = os.environ.get('RECEIVING_EMAIL')
-SMTP_SERVER = os.environ.get('SMTP_SERVER')
-PORT = os.environ.get('PORT')
 
 
-
+SMTP_SERVER = "smtp.gmail.com"
+PORT = 587
 
 
 @app.route('/', methods=["GET", "POST"])
