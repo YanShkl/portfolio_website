@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Yan Shkleinik</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header" >
+				<header>
+					<span class="image avatar"><img src="static/images/avatar.png" alt="" /></span>
+					<h1 id="logo"><a href="#">Yan Shkleinik</a></h1>
+					<p>Success does not just happen,<br />
+					You have to plan for it. We have to concentrate on...<br />
+					Nothing must be done hastily but the killing of fleas.</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#two">Things I Can Do</a></li>
+						<li><a href="#three">The Recent Projects</a></li>
+						<li><a href="#four">Contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/shkleinik_yan/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/YanShkl/" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:yans10500@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				{% with messages = get_flashed_messages() %}
+				    {% if messages %}
+				        {% for message in messages %}
+
+				            {{ message }}
+
+				        {% endfor %}
+				    {% endif %}
+				{% endwith %}
+
+
+
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="static/images/banner.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>About me</h2>
+										<p>I am self-motivated, eager to learn, and<br />
+										enjoy overcoming challenges  .</p>
+									</header>
+									<p>I like working in a digital environment and looking to become an IT professional. During my work experience, I already have gained good Communication and Presentation skills. I'm Passionate about Informational Technologies, Interesting Projects, OSINT and Competitive Intelligence.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Things I interacted with </h3>
+									<p>I am a Python3 developer. And I have experience interacting with such technologies, tools like: flask, Selenium Web Driver, NumPy, Databases, SQLite, Web Scraping, <a target="_blank" href = "https://docs.google.com/document/d/1ZvL6EHZ3VXZR9UddIwj4_nhIPKS30yd9dSU2Dl1cNR0/edit?usp=sharing">Full list of technologies/tools.</a></p>
+
+									<ul class="feature-icons">
+										<li class="icon solid fa-code">Python 3</li>
+										<li class="icon solid fa-cubes">Pandas, SQLite</li>
+										<li class="icon solid fa-book">Numpy, Plotly</li>
+										<li class="icon solid fa-coffee">Flask, Bootstrap 4</li>
+										<li class="icon solid fa-bolt">Selenium Web Driver</li>
+										<li class="icon solid fa-users">Deployment with GitHub Pages, Heroku and GUnicorn</li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>The Recent Projects</h3>
+									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<div class="features">
+										<article>
+											<a href="#" class="image"><img src="static/images/cope.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>Text-Morse converter</h4>
+												<p>A quick command line project that will convert text to morse code and sound, and convert from morse code back to text.</p>
+											</div>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="static/images/pic02.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>Coming soon...</h4>
+												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://github.com/YanShkl/" class="image"><img src="static/images/pic03.png" alt="" /></a>
+											<div class="inner">
+												<h4>All projects are available on GitHub</h4>
+												<p>Get unlimited access to all the unique projects developed by me right now!</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3 style="color: #5C351C;">Contact Me</h3>
+									<h4 >Want to cooperate? Questions? </h4>
+									<p>Fill out the short form, and you will receive an answer as soon as possible.</p>
+									<form method="post" action="/send_message">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" class="form-control" required></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" class="form-control" id="email" placeholder="Email" required></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" class="form-control" required></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6" class="form-control" required></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+
+
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Yan Shkleinik. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
